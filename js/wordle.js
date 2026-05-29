@@ -571,7 +571,7 @@ function endGame(isHit, loadFlg = false) {
 
     if (isHit === wrong) {
         // デイリーモードでゲーム終了した時とエンドレスモードで正解できなかった時の処理
-        const shareStr = currentMode == modes.endless ? createShareStrForEndless() : createShareStrForDaily(isHit);
+        const shareStr = createShareStrForEndless();
         insertShareButton(shareStr);
 
         insertRetryButton();
@@ -657,6 +657,7 @@ function insertRetryButton() {
 }
 
 function insertSingleButton(id, text, triggered) {
+    console.log(text);
     $('#infoButtonArea').append($('<div>').attr('id', 'singleButtonArea'));
     $('#singleButtonArea').append(createButton(id, 'btnYellow', text));
     $(`#${id}`).on('click', function () { triggered() });
