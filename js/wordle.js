@@ -1,70 +1,328 @@
 const allQuizData = [
-{answer:'アーサー', element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-', icon: 'images/icon/アーサー.jpg'},
-{answer:'アーミラ', element:'光', type:'特殊タイプ', race:'その他', weapon1:'格闘', weapon2:'-', icon: 'images/icon/アーミラ.jpg'},
-{answer:'アイザック', element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'銃', icon: 'images/icon/アイザック.jpg'},
-{answer:'アイル', element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-', icon: 'images/icon/アイル.jpg'},
-{answer:'アオイドス', element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'楽器', icon: 'images/icon/アオイドス.jpg'},
-{answer:'アギエルバ', element:'火', type:'防御タイプ', race:'ドラフ', weapon1:'剣', weapon2:'-', icon: 'images/icon/アギエルバ.jpg'},
-{answer:'アグロヴァル', element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-', icon: 'images/icon/アグロヴァル.jpg'},
-{answer:'アザゼル', element:'闇', type:'攻撃タイプ', race:'星晶獣', weapon1:'短剣', weapon2:'格闘', icon: 'images/icon/アザゼル.jpg'},
-{answer:'アズサ', element:'風', type:'攻撃タイプ', race:'ドラフ', weapon1:'刀', weapon2:'-', icon: 'images/icon/アズサ.jpg'},
-{answer:'アダム', element:'土', type:'防御タイプ', race:'その他', weapon1:'剣', weapon2:'-', icon: 'images/icon/アダム.jpg'},
-{answer:'アテナ', element:'火', type:'防御タイプ', race:'星晶獣', weapon1:'槍', weapon2:'-', icon: 'images/icon/アテナ.jpg'},
-{answer:'アトゥム', element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-', icon: 'images/icon/アトゥム.jpg'},
-{answer:'アニラ', element:'火', type:'バランスタイプ', race:'ドラフ', weapon1:'槍', weapon2:'格闘', icon: 'images/icon/アニラ.jpg'},
-{answer:'アビー', element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'斧', weapon2:'-', icon: 'images/icon/アビー.jpg'},
-{answer:'アマテラス', element:'光', type:'回復タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-', icon: 'images/icon/アマテラス.jpg'},
-{answer:'アミ', element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'銃', weapon2:'-', icon: 'images/icon/アミ.jpg'},
-{answer:'アラナン', element:'火', type:'攻撃タイプ', race:'エルーン', weapon1:'杖', weapon2:'-', icon: 'images/icon/アラナン.jpg'},
-{answer:'アリア', element:'風', type:'特殊タイプ', race:'エルーン', weapon1:'剣', weapon2:'-', icon: 'images/icon/アリア.jpg'},
-{answer:'アリーザ', element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-', icon: 'images/icon/アリーザ.jpg'},
-{answer:'アルタイル', element:'水', type:'バランスタイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-', icon: 'images/icon/アルタイル.jpg'},
-{answer:'アルベール', element:'光', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-', icon: 'images/icon/アルベール.jpg'},
-{answer:'アルルメイヤ', element:'土', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-', icon: 'images/icon/アルルメイヤ.jpg'},
-{answer:'アレーティア', element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀', icon: 'images/icon/アレーティア.jpg'},
-{answer:'アン', element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'杖', icon: 'images/icon/アン.jpg'},
-{answer:'アンジェ', element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-', icon: 'images/icon/アンジェ.jpg'},
-{answer:'アンスリア', element:'火', type:'特殊タイプ', race:'エルーン', weapon1:'格闘', weapon2:'楽器', icon: 'images/icon/アンスリア.jpg'},
+{charaName:'アーサー',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アーサー.jpg'},
+{charaName:'アーミラ',data:{element:'光', type:'特殊タイプ', race:'その他', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/アーミラ.jpg'},
+{charaName:'アイザック',data:{element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'銃'}, icon: 'images/icon/アイザック.jpg'},
+{charaName:'アイル',data:{element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/アイル.jpg'},
+{charaName:'アオイドス',data:{element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'楽器'}, icon: 'images/icon/アオイドス.jpg'},
+{charaName:'アギエルバ',data:{element:'火', type:'防御タイプ', race:'ドラフ', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アギエルバ.jpg'},
+{charaName:'アグロヴァル',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アグロヴァル.jpg'},
+{charaName:'アザゼル',data:{element:'闇', type:'攻撃タイプ', race:'星晶獣', weapon1:'短剣', weapon2:'格闘'}, icon: 'images/icon/アザゼル.jpg'},
+{charaName:'アズサ',data:{element:'風', type:'攻撃タイプ', race:'ドラフ', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/アズサ.jpg'},
+{charaName:'アダム',data:{element:'土', type:'防御タイプ', race:'その他', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アダム.jpg'},
+{charaName:'アテナ',data:{element:'火', type:'防御タイプ', race:'星晶獣', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/アテナ.jpg'},
+{charaName:'アトゥム',data:{element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アトゥム.jpg'},
+{charaName:'アニラ',data:{element:'火', type:'バランスタイプ', race:'ドラフ', weapon1:'槍', weapon2:'格闘'}, icon: 'images/icon/アニラ.jpg'},
+{charaName:'アビー',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/アビー.jpg'},
+{charaName:'アマテラス',data:{element:'光', type:'回復タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アマテラス.jpg'},
+{charaName:'アミ',data:{element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/アミ.jpg'},
+{charaName:'アラナン',data:{element:'火', type:'攻撃タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アラナン.jpg'},
+{charaName:'アリア',data:{element:'風', type:'特殊タイプ', race:'エルーン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アリア.jpg'},
+{charaName:'アリーザ',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/アリーザ.jpg'},
+{charaName:'アルタイル',data:{element:'水', type:'バランスタイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アルタイル.jpg'},
+{charaName:'アルベール',data:{element:'光', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アルベール.jpg'},
+{charaName:'アルルメイヤ',data:{element:'土', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アルルメイヤ.jpg'},
+{charaName:'アレーティア',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/アレーティア.jpg'},
+{charaName:'アン',data:{element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'杖'}, icon: 'images/icon/アン.jpg'},
+{charaName:'アンジェ',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/アンジェ.jpg'},
+{charaName:'アンスリア',data:{element:'火', type:'特殊タイプ', race:'エルーン', weapon1:'格闘', weapon2:'楽器'}, icon: 'images/icon/アンスリア.jpg'},
+{charaName:'アンダーソン',data:{element:'火', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'斧'}, icon: 'images/icon/アンダーソン.jpg'},
+{charaName:'アンチラ',data:{element:'風', type:'バランスタイプ', race:'エルーン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/アンチラ.jpg'},
+{charaName:'アンナ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/アンナ.jpg'},
+{charaName:'アンリエット',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/アンリエット.jpg'},
+{charaName:'イーウィヤ',data:{element:'風', type:'特殊タイプ', race:'その他', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/イーウィヤ.jpg'},
+{charaName:'イオ',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/イオ.jpg'},
+{charaName:'イカロス',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/イカロス.jpg'},
+{charaName:'イシュミール',data:{element:'水', type:'攻撃タイプ', race:'ドラフ', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/イシュミール.jpg'},
+{charaName:'イッパツ',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/イッパツ.jpg'},
+{charaName:'イルザ',data:{element:'土', type:'攻撃タイプ', race:'エルーン', weapon1:'銃', weapon2:'弓'}, icon: 'images/icon/イルザ.jpg'},
+{charaName:'イルノート',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/イルノート.jpg'},
+{charaName:'イングヴェイ',data:{element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'銃'}, icon: 'images/icon/イングヴェイ.jpg'},
+{charaName:'インダラ',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/インダラ.jpg'},
+{charaName:'ヴァイト',data:{element:'闇', type:'攻撃タイプ', race:'その他', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ヴァイト.jpg'},
+{charaName:'ヴァジラ',data:{element:'水', type:'攻撃タイプ', race:'エルーン', weapon1:'刀', weapon2:'格闘'}, icon: 'images/icon/ヴァジラ.jpg'},
+{charaName:'ヴァルフリート',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ヴァルフリート.jpg'},
+{charaName:'ヴァンピィ',data:{element:'闇', type:'特殊タイプ', race:'その他', weapon1:'杖', weapon2:'短剣'}, icon: 'images/icon/ヴァンピィ.jpg'},
+{charaName:'ヴィーラ',data:{element:'闇', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ヴィーラ.jpg'},
+{charaName:'ウィル',data:{element:'闇', type:'回復タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'杖'}, icon: 'images/icon/ウィル.jpg'},
+{charaName:'ウィルナス',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'斧'}, icon: 'images/icon/ウィルナス.jpg'},
+{charaName:'ウーノ',data:{element:'水', type:'防御タイプ', race:'ハーヴィン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ウーノ.jpg'},
+{charaName:'ウーフとレニー',data:{element:'闇', type:'攻撃タイプ', race:'その他', weapon1:'格闘', weapon2:'銃'}, icon: 'images/icon/ウーフとレニー.jpg'},
+{charaName:'ヴェイン',data:{element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'斧'}, icon: 'images/icon/ヴェイン.jpg'},
+{charaName:'ウツセミ',data:{element:'光', type:'特殊タイプ', race:'ドラフ', weapon1:'楽器', weapon2:'短剣'}, icon: 'images/icon/ウツセミ.jpg'},
+{charaName:'ウリエル',data:{element:'土', type:'攻撃タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ウリエル.jpg'},
+{charaName:'ウルキ',data:{element:'水', type:'バランスタイプ', race:'ハーヴィン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ウルキ.jpg'},
+{charaName:'エイレア',data:{element:'風', type:'バランスタイプ', race:'エルーン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/エイレア.jpg'},
+{charaName:'エウロペ',data:{element:'水', type:'回復タイプ', race:'星晶獣', weapon1:'杖', weapon2:'槍'}, icon: 'images/icon/エウロペ.jpg'},
+{charaName:'エキドナ',data:{element:'風', type:'防御タイプ', race:'星晶獣', weapon1:'杖', weapon2:'楽器'}, icon: 'images/icon/エキドナ.jpg'},
+{charaName:'エスタリオラ',data:{element:'風', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/エスタリオラ.jpg'},
+{charaName:'エッセル',data:{element:'火', type:'バランスタイプ', race:'エルーン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/エッセル.jpg'},
+{charaName:'エニュオ',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/エニュオ.jpg'},
+{charaName:'エミリア',data:{element:'土', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/エミリア.jpg'},
+{charaName:'エリカ',data:{element:'水', type:'バランスタイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/エリカ.jpg'},
+{charaName:'エリン',data:{element:'水', type:'回復タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/エリン.jpg'},
+{charaName:'エルモート',data:{element:'火', type:'攻撃タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/エルモート.jpg'},
+{charaName:'オイゲン',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/オイゲン.jpg'},
+{charaName:'オーキス',data:{element:'闇', type:'特殊タイプ', race:'その他', weapon1:'短剣', weapon2:'格闘'}, icon: 'images/icon/オーキス.jpg'},
+{charaName:'オクタヴィア',data:{element:'水', type:'攻撃タイプ', race:'エルーン', weapon1:'刀', weapon2:'銃'}, icon: 'images/icon/オクタヴィア.jpg'},
+{charaName:'オクトー',data:{element:'土', type:'攻撃タイプ', race:'ドラフ', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/オクトー.jpg'},
+{charaName:'オリヴィエ',data:{element:'闇', type:'特殊タイプ', race:'星晶獣', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/オリヴィエ.jpg'},
+{charaName:'オロロジャイア',data:{element:'闇', type:'特殊タイプ', race:'その他', weapon1:'斧', weapon2:'杖'}, icon: 'images/icon/オロロジャイア.jpg'},
+{charaName:'ガイゼンボーガ',data:{element:'光', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ガイゼンボーガ.jpg'},
+{charaName:'カイム',data:{element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'格闘'}, icon: 'images/icon/カイム.jpg'},
+{charaName:'カイン',data:{element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/カイン.jpg'},
+{charaName:'ガウェイン',data:{element:'風', type:'防御タイプ', race:'ヒューマン', weapon1:'斧', weapon2:'槍'}, icon: 'images/icon/ガウェイン.jpg'},
+{charaName:'カグヤ',data:{element:'風', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/カグヤ.jpg'},
+{charaName:'カタリナ',data:{element:'水', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/カタリナ.jpg'},
+{charaName:'カッツェリーラ',data:{element:'風', type:'防御タイプ', race:'ハーヴィン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/カッツェリーラ.jpg'},
+{charaName:'カトル',data:{element:'水', type:'特殊タイプ', race:'エルーン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/カトル.jpg'},
+{charaName:'ガブリエル',data:{element:'水', type:'防御タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ガブリエル.jpg'},
+{charaName:'カリオストロ',data:{element:'土', type:'回復タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/カリオストロ.jpg'},
+{charaName:'カルメリーナ',data:{element:'風', type:'特殊タイプ', race:'ドラフ', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/カルメリーナ.jpg'},
+{charaName:'ガレヲン',data:{element:'土', type:'バランスタイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ガレヲン.jpg'},
+{charaName:'カロ',data:{element:'風', type:'バランスタイプ', race:'星晶獣', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/カロ.jpg'},
+{charaName:'カンターテ',data:{element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/カンターテ.jpg'},
+{charaName:'ガンダゴウザ',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ガンダゴウザ.jpg'},
+{charaName:'キャサリン',data:{element:'土', type:'特殊タイプ', race:'エルーン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/キャサリン.jpg'},
+{charaName:'グウィン',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'銃'}, icon: 'images/icon/グウィン.jpg'},
+{charaName:'ククル',data:{element:'水', type:'バランスタイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/ククル.jpg'},
+{charaName:'クピタン',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'弓', weapon2:'-'}, icon: 'images/icon/クピタン.jpg'},
+{charaName:'クビラ',data:{element:'光', type:'攻撃タイプ', race:'ドラフ', weapon1:'槍', weapon2:'斧'}, icon: 'images/icon/クビラ.jpg'},
+{charaName:'クラリス',data:{element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/クラリス.jpg'},
+{charaName:'グリームニル',data:{element:'風', type:'バランスタイプ', race:'星晶獣', weapon1:'槍', weapon2:'杖'}, icon: 'images/icon/グリームニル.jpg'},
+{charaName:'クリスティーナ',data:{element:'風', type:'バランスタイプ', race:'ヒューマン', weapon1:'銃', weapon2:'短剣'}, icon: 'images/icon/クリスティーナ.jpg'},
+{charaName:'グレア',data:{element:'火', type:'攻撃タイプ', race:'その他', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/グレア.jpg'},
+{charaName:'クロエ',data:{element:'闇', type:'特殊タイプ', race:'エルーン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/クロエ.jpg'},
+{charaName:'ケルベロス',data:{element:'闇', type:'特殊タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ケルベロス.jpg'},
+{charaName:'コウ',data:{element:'闇', type:'回復タイプ', race:'エルーン', weapon1:'刀', weapon2:'楽器'}, icon: 'images/icon/コウ.jpg'},
+{charaName:'コク',data:{element:'闇', type:'特殊タイプ', race:'その他', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/コク.jpg'},
+{charaName:'コスモス',data:{element:'光', type:'バランスタイプ', race:'星晶獣', weapon1:'銃', weapon2:'剣'}, icon: 'images/icon/コスモス.jpg'},
+{charaName:'コルル',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/コルル.jpg'},
+{charaName:'コルワ',data:{element:'風', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/コルワ.jpg'},
+{charaName:'コロッサス',data:{element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'剣', weapon2:'斧'}, icon: 'images/icon/コロッサス.jpg'},
+{charaName:'コンスタンツィア',data:{element:'闇', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/コンスタンツィア.jpg'},
+{charaName:'サテュロス',data:{element:'火', type:'防御タイプ', race:'星晶獣', weapon1:'杖', weapon2:'剣'}, icon: 'images/icon/サテュロス.jpg'},
+{charaName:'さと',data:{element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'刀'}, icon: 'images/icon/さと.jpg'},
+{charaName:'サビルバラ',data:{element:'火', type:'攻撃タイプ', race:'ハーヴィン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/サビルバラ.jpg'},
+{charaName:'サブリナ',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/サブリナ.jpg'},
+{charaName:'サラ',data:{element:'土', type:'防御タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/サラ.jpg'},
+{charaName:'サラーサ',data:{element:'土', type:'攻撃タイプ', race:'ドラフ', weapon1:'剣', weapon2:'斧'}, icon: 'images/icon/サラーサ.jpg'},
+{charaName:'サリエル',data:{element:'闇', type:'攻撃タイプ', race:'星晶獣', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/サリエル.jpg'},
+{charaName:'サルナーン',data:{element:'光', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/サルナーン.jpg'},
+{charaName:'ザルハメリナ',data:{element:'火', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ザルハメリナ.jpg'},
+{charaName:'サンダルフォン',data:{element:'光', type:'攻撃タイプ', race:'星晶獣', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/サンダルフォン.jpg'},
+{charaName:'サンチラ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'弓', weapon2:'楽器'}, icon: 'images/icon/サンチラ.jpg'},
+{charaName:'サンドリヨン',data:{element:'闇', type:'攻撃タイプ', race:'その他', weapon1:'短剣', weapon2:'格闘'}, icon: 'images/icon/サンドリヨン.jpg'},
+{charaName:'ジークフリート',data:{element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/ジークフリート.jpg'},
+{charaName:'シーザー',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/シーザー.jpg'},
+{charaName:'シヴァ',data:{element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'槍', weapon2:'杖'}, icon: 'images/icon/シヴァ.jpg'},
+{charaName:'ジェシカ',data:{element:'闇', type:'バランスタイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/ジェシカ.jpg'},
+{charaName:'シエテ',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/シエテ.jpg'},
+{charaName:'シェリーネ',data:{element:'光', type:'攻撃タイプ', race:'エルーン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/シェリーネ.jpg'},
+{charaName:'シオン',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/シオン.jpg'},
+{charaName:'シス',data:{element:'闇', type:'攻撃タイプ', race:'エルーン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/シス.jpg'},
+{charaName:'シトリ',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'弓', weapon2:'刀'}, icon: 'images/icon/シトリ.jpg'},
+{charaName:'ジャスミン',data:{element:'闇', type:'回復タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ジャスミン.jpg'},
+{charaName:'シャトラ',data:{element:'風', type:'攻撃タイプ', race:'ドラフ', weapon1:'槍', weapon2:'格闘'}, icon: 'images/icon/シャトラ.jpg'},
+{charaName:'シャノワール',data:{element:'水', type:'特殊タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'短剣'}, icon: 'images/icon/シャノワール.jpg'},
+{charaName:'ジャミル',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ジャミル.jpg'},
+{charaName:'シャルロッテ',data:{element:'水', type:'バランスタイプ', race:'ハーヴィン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/シャルロッテ.jpg'},
+{charaName:'ジャンヌダルク',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'槍'}, icon: 'images/icon/ジャンヌダルク.jpg'},
+{charaName:'シュクラ',data:{element:'水', type:'バランスタイプ', race:'エルーン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/シュクラ.jpg'},
+{charaName:'シュシュク',data:{element:'土', type:'バランスタイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/シュシュク.jpg'},
+{charaName:'シュラ',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/シュラ.jpg'},
+{charaName:'ジュリエット',data:{element:'光', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ジュリエット.jpg'},
+{charaName:'ジョイ',data:{element:'風', type:'特殊タイプ', race:'その他', weapon1:'格闘', weapon2:'弓'}, icon: 'images/icon/ジョイ.jpg'},
+{charaName:'ショウ',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ショウ.jpg'},
+{charaName:'ジョエル',data:{element:'水', type:'回復タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'短剣'}, icon: 'images/icon/ジョエル.jpg'},
+{charaName:'シルヴァ',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/シルヴァ.jpg'},
+{charaName:'シルヴィア',data:{element:'水', type:'バランスタイプ', race:'星晶獣', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/シルヴィア.jpg'},
+{charaName:'シルフ',data:{element:'火', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/シルフ.jpg'},
+{charaName:'シロウ',data:{element:'闇', type:'防御タイプ', race:'ヒューマン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/シロウ.jpg'},
+{charaName:'ジン',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/ジン.jpg'},
+{charaName:'シンダラ',data:{element:'土', type:'攻撃タイプ', race:'エルーン', weapon1:'斧', weapon2:'格闘'}, icon: 'images/icon/シンダラ.jpg'},
+{charaName:'スイ',data:{element:'光', type:'回復タイプ', race:'その他', weapon1:'格闘', weapon2:'楽器'}, icon: 'images/icon/スイ.jpg'},
+{charaName:'スーテラ',data:{element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'弓', weapon2:'-'}, icon: 'images/icon/スーテラ.jpg'},
+{charaName:'スカーサハ',data:{element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/スカーサハ.jpg'},
+{charaName:'スクルド',data:{element:'風', type:'攻撃タイプ', race:'その他', weapon1:'弓', weapon2:'剣'}, icon: 'images/icon/スクルド.jpg'},
+{charaName:'スツルム',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/スツルム.jpg'},
+{charaName:'スピナー',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/スピナー.jpg'},
+{charaName:'ゼタ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ゼタ.jpg'},
+{charaName:'ゼヘク',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'格闘'}, icon: 'images/icon/ゼヘク.jpg'},
+{charaName:'セルエル',data:{element:'光', type:'攻撃タイプ', race:'エルーン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/セルエル.jpg'},
+{charaName:'セレフィラ',data:{element:'風', type:'特殊タイプ', race:'エルーン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/セレフィラ.jpg'},
+{charaName:'セワスチアン',data:{element:'闇', type:'攻撃タイプ', race:'エルーン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/セワスチアン.jpg'},
+{charaName:'セン',data:{element:'風', type:'攻撃タイプ', race:'エルーン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/セン.jpg'},
+{charaName:'ゾーイ',data:{element:'光', type:'バランスタイプ', race:'星晶獣', weapon1:'銃', weapon2:'剣'}, icon: 'images/icon/ゾーイ.jpg'},
+{charaName:'ソーン',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'弓', weapon2:'-'}, icon: 'images/icon/ソーン.jpg'},
+{charaName:'ソシエ',data:{element:'水', type:'特殊タイプ', race:'エルーン', weapon1:'格闘', weapon2:'楽器'}, icon: 'images/icon/ソシエ.jpg'},
+{charaName:'ソフィア',data:{element:'光', type:'回復タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ソフィア.jpg'},
+{charaName:'ソリッズ',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ソリッズ.jpg'},
+{charaName:'ターニャ',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ターニャ.jpg'},
+{charaName:'ダーント',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/ダーント.jpg'},
+{charaName:'タヴィーナ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'弓', weapon2:'斧'}, icon: 'images/icon/タヴィーナ.jpg'},
+{charaName:'ダヌア',data:{element:'闇', type:'攻撃タイプ', race:'ドラフ', weapon1:'短剣', weapon2:'斧'}, icon: 'images/icon/ダヌア.jpg'},
+{charaName:'ダリダラ',data:{element:'水', type:'防御タイプ', race:'ハーヴィン', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/ダリダラ.jpg'},
+{charaName:'チチリ',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/チチリ.jpg'},
+{charaName:'ツクヨミ',data:{element:'闇', type:'回復タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ツクヨミ.jpg'},
+{charaName:'ツバサ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ツバサ.jpg'},
+{charaName:'ティアマト',data:{element:'風', type:'特殊タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'杖'}, icon: 'images/icon/ティアマト.jpg'},
+{charaName:'ディアンサ',data:{element:'土', type:'回復タイプ', race:'ヒューマン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/ディアンサ.jpg'},
+{charaName:'ティコ',data:{element:'光', type:'回復タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ティコ.jpg'},
+{charaName:'ティラ',data:{element:'闇', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ティラ.jpg'},
+{charaName:'テフヌト',data:{element:'水', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/テフヌト.jpg'},
+{charaName:'デリフォード',data:{element:'水', type:'防御タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/デリフォード.jpg'},
+{charaName:'テレーズ',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/テレーズ.jpg'},
+{charaName:'ドランク',data:{element:'水', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ドランク.jpg'},
+{charaName:'トルー',data:{element:'水', type:'特殊タイプ', race:'エルーン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/トルー.jpg'},
+{charaName:'ドロッセル',data:{element:'光', type:'特殊タイプ', race:'ハーヴィン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ドロッセル.jpg'},
+{charaName:'ナーヴェ',data:{element:'光', type:'特殊タイプ', race:'ヒューマン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/ナーヴェ.jpg'},
+{charaName:'ナタク',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ナタク.jpg'},
+{charaName:'ナルメア',data:{element:'闇', type:'攻撃タイプ', race:'ドラフ', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/ナルメア.jpg'},
+{charaName:'ニーア',data:{element:'闇', type:'特殊タイプ', race:'エルーン', weapon1:'斧', weapon2:'短剣'}, icon: 'images/icon/ニーア.jpg'},
+{charaName:'ニオ',data:{element:'風', type:'特殊タイプ', race:'ハーヴィン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/ニオ.jpg'},
+{charaName:'ネクタル',data:{element:'風', type:'攻撃タイプ', race:'その他', weapon1:'刀', weapon2:'弓'}, icon: 'images/icon/ネクタル.jpg'},
+{charaName:'ネツァワルピリ',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ネツァワルピリ.jpg'},
+{charaName:'ネハン',data:{element:'光', type:'特殊タイプ', race:'エルーン', weapon1:'銃', weapon2:'格闘'}, icon: 'images/icon/ネハン.jpg'},
+{charaName:'ネモネ',data:{element:'土', type:'攻撃タイプ', race:'エルーン', weapon1:'斧', weapon2:'槍'}, icon: 'images/icon/ネモネ.jpg'},
+{charaName:'ノア',data:{element:'光', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'銃'}, icon: 'images/icon/ノア.jpg'},
+{charaName:'ノイシュ',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'弓', weapon2:'短剣'}, icon: 'images/icon/ノイシュ.jpg'},
+{charaName:'ノワール',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ノワール.jpg'},
+{charaName:'パーシヴァル',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/パーシヴァル.jpg'},
+{charaName:'ハーゼリーラ',data:{element:'水', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/ハーゼリーラ.jpg'},
+{charaName:'バアル',data:{element:'土', type:'バランスタイプ', race:'星晶獣', weapon1:'楽器', weapon2:'斧'}, icon: 'images/icon/バアル.jpg'},
+{charaName:'ハールート・マールート',data:{element:'闇', type:'特殊タイプ', race:'星晶獣', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ハールート・マールート.jpg'},
+{charaName:'バイヴカハ',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/バイヴカハ.jpg'},
+{charaName:'バイシュラ',data:{element:'土', type:'回復タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/バイシュラ.jpg'},
+{charaName:'ハイラ',data:{element:'水', type:'攻撃タイプ', race:'ドラフ', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ハイラ.jpg'},
+{charaName:'バウタオーダ',data:{element:'光', type:'防御タイプ', race:'ドラフ', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/バウタオーダ.jpg'},
+{charaName:'ハウヘト',data:{element:'火', type:'特殊タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ハウヘト.jpg'},
+{charaName:'バサラ',data:{element:'光', type:'攻撃タイプ', race:'エルーン', weapon1:'刀', weapon2:'格闘'}, icon: 'images/icon/バサラ.jpg'},
+{charaName:'バザラガ',data:{element:'闇', type:'攻撃タイプ', race:'ドラフ', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/バザラガ.jpg'},
+{charaName:'パラシュラーマ',data:{element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'弓', weapon2:'斧'}, icon: 'images/icon/パラシュラーマ.jpg'},
+{charaName:'パリス',data:{element:'土', type:'防御タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/パリス.jpg'},
+{charaName:'ハレゼナ',data:{element:'土', type:'攻撃タイプ', race:'ドラフ', weapon1:'斧', weapon2:'-'}, icon: 'images/icon/ハレゼナ.jpg'},
+{charaName:'ピィジウ',data:{element:'光', type:'回復タイプ', race:'その他', weapon1:'刀', weapon2:'槍'}, icon: 'images/icon/ピィジウ.jpg'},
+{charaName:'ビカラ',data:{element:'闇', type:'バランスタイプ', race:'ヒューマン', weapon1:'斧', weapon2:'格闘'}, icon: 'images/icon/ビカラ.jpg'},
+{charaName:'ファスティバ',data:{element:'土', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ファスティバ.jpg'},
+{charaName:'フィーナ',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'弓', weapon2:'-'}, icon: 'images/icon/フィーナ.jpg'},
+{charaName:'フィオリト',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/フィオリト.jpg'},
+{charaName:'フィルキス',data:{element:'土', type:'バランスタイプ', race:'レヴリス', weapon1:'短剣', weapon2:'銃'}, icon: 'images/icon/フィルキス.jpg'},
+{charaName:'フィルレイン',data:{element:'水', type:'特殊タイプ', race:'その他', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/フィルレイン.jpg'},
+{charaName:'フェザー',data:{element:'光', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/フェザー.jpg'},
+{charaName:'フェディエル',data:{element:'闇', type:'特殊タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'剣'}, icon: 'images/icon/フェディエル.jpg'},
+{charaName:'フェニー',data:{element:'火', type:'回復タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/フェニー.jpg'},
+{charaName:'フェリ',data:{element:'光', type:'バランスタイプ', race:'エルーン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/フェリ.jpg'},
+{charaName:'フェルルカ',data:{element:'土', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'斧'}, icon: 'images/icon/フェルルカ.jpg'},
+{charaName:'フォリア',data:{element:'水', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/フォリア.jpg'},
+{charaName:'フォルテ',data:{element:'闇', type:'攻撃タイプ', race:'ドラフ', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/フォルテ.jpg'},
+{charaName:'フュンフ',data:{element:'光', type:'回復タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/フュンフ.jpg'},
+{charaName:'フラウ',data:{element:'火', type:'攻撃タイプ', race:'エルーン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/フラウ.jpg'},
+{charaName:'フレイ',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/フレイ.jpg'},
+{charaName:'プレデター',data:{element:'闇', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/プレデター.jpg'},
+{charaName:'ブローディア',data:{element:'土', type:'防御タイプ', race:'星晶獣', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/ブローディア.jpg'},
+{charaName:'フロレンス',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/フロレンス.jpg'},
+{charaName:'ベアトリクス',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ベアトリクス.jpg'},
+{charaName:'ヘカテー',data:{element:'火', type:'攻撃タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ヘカテー.jpg'},
+{charaName:'ペトラ',data:{element:'風', type:'バランスタイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ペトラ.jpg'},
+{charaName:'ヘリヤ',data:{element:'土', type:'防御タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ヘリヤ.jpg'},
+{charaName:'ヘルエス',data:{element:'火', type:'攻撃タイプ', race:'エルーン', weapon1:'槍', weapon2:'杖'}, icon: 'images/icon/ヘルエス.jpg'},
+{charaName:'ベルソー',data:{element:'土', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ベルソー.jpg'},
+{charaName:'ヘレル・ベン・シャレム',data:{element:'闇', type:'特殊タイプ', race:'その他', weapon1:'槍', weapon2:'杖'}, icon: 'images/icon/ヘレル・ベン・シャレム.jpg'},
+{charaName:'ペンギー',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'銃'}, icon: 'images/icon/ペンギー.jpg'},
+{charaName:'ベンヌ',data:{element:'土', type:'攻撃タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ベンヌ.jpg'},
+{charaName:'ポセイドン',data:{element:'水', type:'攻撃タイプ', race:'星晶獣', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ポセイドン.jpg'},
+{charaName:'ホルス',data:{element:'光', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ホルス.jpg'},
+{charaName:'ボレミア',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ボレミア.jpg'},
+{charaName:'マーズ',data:{element:'光', type:'攻撃タイプ', race:'星晶獣', weapon1:'槍', weapon2:'斧'}, icon: 'images/icon/マーズ.jpg'},
+{charaName:'マイシェラ',data:{element:'光', type:'特殊タイプ', race:'エルーン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/マイシェラ.jpg'},
+{charaName:'マギサ',data:{element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/マギサ.jpg'},
+{charaName:'マキュラ・マリウス',data:{element:'水', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/マキュラ・マリウス.jpg'},
+{charaName:'マキラ',data:{element:'土', type:'特殊タイプ', race:'ハーヴィン', weapon1:'楽器', weapon2:'格闘'}, icon: 'images/icon/マキラ.jpg'},
+{charaName:'マコラ',data:{element:'光', type:'攻撃タイプ', race:'エルーン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/マコラ.jpg'},
+{charaName:'マッコイ',data:{element:'土', type:'特殊タイプ', race:'ヒューマン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/マッコイ.jpg'},
+{charaName:'マナマル',data:{element:'闇', type:'攻撃タイプ', race:'エルーン', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/マナマル.jpg'},
+{charaName:'マヌ＝ポヌマウ',data:{element:'闇', type:'防御タイプ', race:'ヴォルヴィル', weapon1:'槍', weapon2:'格闘'}, icon: 'images/icon/マヌ＝ポヌマウ.jpg'},
+{charaName:'マリア・テレサ',data:{element:'水', type:'バランスタイプ', race:'ドラフ', weapon1:'杖', weapon2:'剣'}, icon: 'images/icon/マリア・テレサ.jpg'},
+{charaName:'マルキアレス',data:{element:'闇', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/マルキアレス.jpg'},
+{charaName:'ミカエル',data:{element:'火', type:'攻撃タイプ', race:'星晶獣', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ミカエル.jpg'},
+{charaName:'ミニゴブ',data:{element:'光', type:'特殊タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ミニゴブ.jpg'},
+{charaName:'ミランダ',data:{element:'火', type:'回復タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ミランダ.jpg'},
+{charaName:'ミリン',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'刀', weapon2:'-'}, icon: 'images/icon/ミリン.jpg'},
+{charaName:'ムゲン',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'楽器'}, icon: 'images/icon/ムゲン.jpg'},
+{charaName:'メイガス',data:{element:'闇', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/メイガス.jpg'},
+{charaName:'メーテラ',data:{element:'風', type:'バランスタイプ', race:'エルーン', weapon1:'弓', weapon2:'-'}, icon: 'images/icon/メーテラ.jpg'},
+{charaName:'メドゥーサ',data:{element:'土', type:'バランスタイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/メドゥーサ.jpg'},
+{charaName:'メリッサベル',data:{element:'風', type:'攻撃タイプ', race:'ハーヴィン', weapon1:'剣', weapon2:'斧'}, icon: 'images/icon/メリッサベル.jpg'},
+{charaName:'メルゥ',data:{element:'土', type:'攻撃タイプ', race:'エルーン', weapon1:'槍', weapon2:'斧'}, icon: 'images/icon/メルゥ.jpg'},
+{charaName:'メレアガンス',data:{element:'土', type:'防御タイプ', race:'その他', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/メレアガンス.jpg'},
+{charaName:'モニカ',data:{element:'風', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/モニカ.jpg'},
+{charaName:'ヤイア',data:{element:'土', type:'特殊タイプ', race:'ドラフ', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ヤイア.jpg'},
+{charaName:'ヤチマ',data:{element:'水', type:'特殊タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ヤチマ.jpg'},
+{charaName:'ユイシス',data:{element:'風', type:'バランスタイプ', race:'エルーン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/ユイシス.jpg'},
+{charaName:'ユーステス',data:{element:'土', type:'攻撃タイプ', race:'エルーン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/ユーステス.jpg'},
+{charaName:'ユーリ',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ユーリ.jpg'},
+{charaName:'ユエル',data:{element:'火', type:'バランスタイプ', race:'エルーン', weapon1:'刀', weapon2:'楽器'}, icon: 'images/icon/ユエル.jpg'},
+{charaName:'ユグドラシル',data:{element:'土', type:'特殊タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ユグドラシル.jpg'},
+{charaName:'ユニ',data:{element:'光', type:'バランスタイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ユニ.jpg'},
+{charaName:'ユリウス',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'杖'}, icon: 'images/icon/ユリウス.jpg'},
+{charaName:'ヨウ',data:{element:'光', type:'攻撃タイプ', race:'エルーン', weapon1:'格闘', weapon2:'刀'}, icon: 'images/icon/ヨウ.jpg'},
+{charaName:'ヨダルラーハ',data:{element:'水', type:'攻撃タイプ', race:'ハーヴィン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/ヨダルラーハ.jpg'},
+{charaName:'ラインハルザ',data:{element:'火', type:'攻撃タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ラインハルザ.jpg'},
+{charaName:'ラヴィリタ',data:{element:'火', type:'バランスタイプ', race:'ハーヴィン', weapon1:'剣', weapon2:'銃'}, icon: 'images/icon/ラヴィリタ.jpg'},
+{charaName:'ラガッツォ',data:{element:'火', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ラガッツォ.jpg'},
+{charaName:'ラカム',data:{element:'火', type:'特殊タイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/ラカム.jpg'},
+{charaName:'ラグナ',data:{element:'土', type:'特殊タイプ', race:'ドラフ', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/ラグナ.jpg'},
+{charaName:'ラジエル',data:{element:'光', type:'バランスタイプ', race:'星晶獣', weapon1:'銃', weapon2:'杖'}, icon: 'images/icon/ラジエル.jpg'},
+{charaName:'ラスティナ',data:{element:'土', type:'防御タイプ', race:'ドラフ', weapon1:'槍', weapon2:'銃'}, icon: 'images/icon/ラスティナ.jpg'},
+{charaName:'ラファエル',data:{element:'風', type:'攻撃タイプ', race:'星晶獣', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ラファエル.jpg'},
+{charaName:'ラムレッダ',data:{element:'土', type:'特殊タイプ', race:'ドラフ', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ラムレッダ.jpg'},
+{charaName:'ラモラック',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ラモラック.jpg'},
+{charaName:'ランスロット',data:{element:'水', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'短剣'}, icon: 'images/icon/ランスロット.jpg'},
+{charaName:'ランドル',data:{element:'風', type:'攻撃タイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ランドル.jpg'},
+{charaName:'リーシャ',data:{element:'風', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/リーシャ.jpg'},
+{charaName:'リチャード',data:{element:'風', type:'特殊タイプ', race:'ヒューマン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/リチャード.jpg'},
+{charaName:'リッチ',data:{element:'闇', type:'特殊タイプ', race:'星晶獣', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/リッチ.jpg'},
+{charaName:'リリィ',data:{element:'水', type:'回復タイプ', race:'その他', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/リリィ.jpg'},
+{charaName:'リルル',data:{element:'水', type:'特殊タイプ', race:'ハーヴィン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/リルル.jpg'},
+{charaName:'ル・オー',data:{element:'光', type:'回復タイプ', race:'エルーン', weapon1:'格闘', weapon2:'杖'}, icon: 'images/icon/ル・オー.jpg'},
+{charaName:'ルシウス',data:{element:'闇', type:'攻撃タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'刀'}, icon: 'images/icon/ルシウス.jpg'},
+{charaName:'ルシオ',data:{element:'光', type:'バランスタイプ', race:'その他', weapon1:'刀', weapon2:'剣'}, icon: 'images/icon/ルシオ.jpg'},
+{charaName:'ルナール',data:{element:'闇', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/ルナール.jpg'},
+{charaName:'ルリア',data:{element:'※', type:'バランスタイプ', race:'ヒューマン', weapon1:'格闘', weapon2:'-'}, icon: 'images/icon/ルリア.jpg'},
+{charaName:'ルロウホロウ',data:{element:'風', type:'特殊タイプ', race:'ハーヴィン', weapon1:'銃', weapon2:'-'}, icon: 'images/icon/ルロウホロウ.jpg'},
+{charaName:'レ・フィーエ',data:{element:'光', type:'回復タイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/レ・フィーエ.jpg'},
+{charaName:'レイ',data:{element:'闇', type:'特殊タイプ', race:'ハーヴィン', weapon1:'杖', weapon2:'刀'}, icon: 'images/icon/レイ.jpg'},
+{charaName:'レオナ',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'-'}, icon: 'images/icon/レオナ.jpg'},
+{charaName:'レディ・グレイ',data:{element:'闇', type:'特殊タイプ', race:'ヒューマン', weapon1:'槍', weapon2:'格闘'}, icon: 'images/icon/レディ・グレイ.jpg'},
+{charaName:'レナ',data:{element:'風', type:'回復タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'-'}, icon: 'images/icon/レナ.jpg'},
+{charaName:'ローアイン',data:{element:'闇', type:'特殊タイプ', race:'エルーン', weapon1:'短剣', weapon2:'剣'}, icon: 'images/icon/ローアイン.jpg'},
+{charaName:'ロザミア',data:{element:'光', type:'バランスタイプ', race:'ヒューマン', weapon1:'剣', weapon2:'-'}, icon: 'images/icon/ロザミア.jpg'},
+{charaName:'ロゼッタ',data:{element:'風', type:'特殊タイプ', race:'星晶獣', weapon1:'短剣', weapon2:'-'}, icon: 'images/icon/ロゼッタ.jpg'},
+{charaName:'ロベリア',data:{element:'土', type:'攻撃タイプ', race:'ヒューマン', weapon1:'杖', weapon2:'格闘'}, icon: 'images/icon/ロベリア.jpg'},
+{charaName:'ロベルティナ',data:{element:'光', type:'特殊タイプ', race:'ハーヴィン', weapon1:'楽器', weapon2:'-'}, icon: 'images/icon/ロベルティナ.jpg'},
 ];
-
 const maxTries = 5;
-const speedrunMaxStreak = 10;
-const weapons = Object.freeze(['SG', 'SMG', 'AR', 'GL', 'HG', 'RL', 'SR', 'RG', 'MG', 'MT', 'FT']);
-const classes = Object.freeze({ 0b00001: 'タンク', 0b00010: 'アタッカー', 0b00100: 'ヒーラー', 0b01000: 'サポーター', 0b10000: 'T.S' });
-const schools = Object.freeze(['百鬼夜行', 'レッドウィンター', 'トリニティ', 'ゲヘナ', 'アビドス', 'ミレニアム', 'アリウス', '山海経', 'ヴァルキューレ', 'SRT', 'その他', 'ハイランダー', 'ワイルドハント']);
-const attackTypes = Object.freeze(['爆発', '貫通', '神秘', '振動']);
-const modes = Object.freeze({ daily: 'デイリー', endless: 'エンドレス', speedrun: 'スピードラン' });
 const same = 'same';
 const wrong = 'wrong';
-const before = 'より前';
-const after = 'より後';
-const regulations = Object.freeze([
-    { label: '全期間', period: '2099/12/31', key: '' },
-    { label: '1周年まで', period: '2022/01/26', key: '.1st' },
-    { label: '2周年まで', period: '2023/01/24', key: '.2nd' },
-    { label: '3周年まで', period: '2024/01/31', key: '.3rd' },
-    { label: '4周年まで', period: '2025/01/27', key: '.4th' },
-]);
 
-const keyGeneralVisited = 'Kivodle.General.Visited';
-const keyDataLatest = 'Kivodle.Data.Latest';
-const keyDataStudents = 'Kivodle.Data.Students';
-const keyDailyLastPlayed = 'Kivodle.Daily.LastPlayed';
-const keyDailyTarget = 'Kivodle.Daily.Target';
-const keyDailyGuesses = 'Kivodle.Daily.Guesses';
-const keyDailyWinStreak = 'Kivodle.Daily.WinStreak';
-const keyEndlessTarget = 'Kivodle.Endless.Target';
-const keyEndlessGuesses = 'Kivodle.Endless.Guesses';
-const keyEndlessCorrects = 'Kivodle.Endless.Corrects';
-const keyEndlessHighScore = 'Kivodle.Endless.HighScore';
-const keySpeedrunHighScore = 'Kivodle.Speedrun.HighScore';
+
+const keyGeneralVisited = 'GBFwordle.General.Visited';
+const keyDataLatest = 'GBFwordle.Data.Latest';
+const keyDataStudents = 'GBFwordle.Data.Students';
+const keyDailyLastPlayed = 'GBFwordle.Daily.LastPlayed';
+const keyDailyTarget = 'GBFwordle.Daily.Target';
+const keyDailyGuesses = 'GBFwordle.Daily.Guesses';
+const keyDailyWinStreak = 'GBFwordle.Daily.WinStreak';
+const keyEndlessTarget = 'GBFwordle.Endless.Target';
+const keyEndlessGuesses = 'GBFwordle.Endless.Guesses';
+const keyEndlessCorrects = 'GBFwordle.Endless.Corrects';
+const keyEndlessHighScore = 'GBFwordle.Endless.HighScore';
 
 let target;
 let tries;
 let corrects = 0;
 let currentMode;
 let currentRegulation;
-let implementedStudents;
 let regulatedStudents;
 let guesses = [];
 let speedrunStart;
@@ -72,7 +330,6 @@ let speedrunSum;
 let intervalId;
 let pulldown;
 const judges = [];
-const now = getToday();
 
 // ページロード時に1回だけ実行する
 async function gameStart() {
@@ -120,8 +377,6 @@ async function gameStart() {
 
     // 初期化関数を呼び出す
     setup();
-
-    $("#playArea").css('visibility', 'visible');
 }
 
 
@@ -145,16 +400,14 @@ function setup(nextFlg = false) {
     // ロード後に解答回数を使い切っていない場合ボタンを有効化
     if (tries < maxTries) { $("#buttonGuess").removeAttr('disabled'); }
 }
-
-
 // プルダウンリストに値を設定する
 function setCharacterToSelect(characterList) {
     // 値のリストを作成
     let options = [];
     characterList.forEach ((element) => {
         options.push({
-            value: element.answer,
-            text: element.answer,
+            value: element.charaName,
+            text: element.charaName,
             src: element.icon,
         });
     });
@@ -165,7 +418,6 @@ function setCharacterToSelect(characterList) {
     pulldown.addOptions(options);
     pulldown.refreshOptions(false);
 }
-
 function setupDom() {
     setTriesAreaInGame();
     $('#guessArea').removeClass('fold');
@@ -179,34 +431,6 @@ function setTriesAreaInGame() {
     $('#triesArea').html(`解答回数： ${tries} ／ ${maxTries}`);
 }
 
-// デイリーモードセットアップ時の処理
-function setupDailyMode() {
-    // 今日分のセーブデータの有無によって分岐
-    const todayStr = `${now.getUTCFullYear()}/${now.getUTCMonth() + 1}/${now.getUTCDate()}`
-    const lastTarget = getLocalStorage(keyDailyTarget);
-    const lastPlayed = getLocalStorage(keyDailyLastPlayed);
-    if (lastPlayed !== null && guessDate(todayStr, lastPlayed) === same) {
-        // セーブデータがある場合それに沿ってゲームを再現する
-        if (lastTarget !== null) {
-            target = implementedStudents.find((elm) => elm.studentName === lastTarget.studentName);
-        } else {
-            setTarget(now.getUTCFullYear() * 10000 + now.getUTCMonth() * 100 + now.getUTCDate());
-            setLocalStorage(keyDailyTarget, target);
-        }
-        guesses = getLocalStorage(keyDailyGuesses) || [];
-        answerForLoad();
-    } else {
-        // セーブデータがないか、当日のもの以外
-        setTarget(now.getUTCFullYear() * 10000 + now.getUTCMonth() * 100 + now.getUTCDate());
-        removeLocalStorage(keyDailyTarget);
-        removeLocalStorage(keyDailyGuesses);
-        setLocalStorage(keyDailyTarget, target);
-        setLocalStorage(keyDailyLastPlayed, todayStr);
-    }
-
-    setModeInfoAreaForDaily();
-}
-
 // エンドレスモードセットアップ時の処理
 function setupEndlessMode(nextFlg) {
     // エンドレスモードの正解の設定
@@ -218,7 +442,7 @@ function setupEndlessMode(nextFlg) {
         removeLocalStorage(keyEndlessGuesses);
     } else {
         // エンドレスモードのセーブデータのロード時
-        target = allQuizData.find((elm) => elm.studentName === lastTarget.studentName);
+        target = allQuizData.find((elm) => elm.charaName === lastTarget.charaName);
         guesses = getLocalStorage(keyEndlessGuesses) || [];
         corrects = getLocalStorage(keyEndlessCorrects) || 0;
         answerForLoad();
@@ -227,34 +451,18 @@ function setupEndlessMode(nextFlg) {
     setModeInfoAreaForEndless();
 }
 
+
+
+
 function answerForLoad() {
     guesses.forEach(function (elm) {
         answerProcess(elm, true);
     });
 }
 
-
-
-
-function setModeInfoAreaForDaily() {
-    $('#modeNameArea').html('デイリーモード');
-    $('#modeWinStreakArea').html(`連続正解日数：${getLocalStorage(keyDailyWinStreak) || 0}`)
-}
-
 function setModeInfoAreaForEndless() {
     $('#modeNameArea').html(`エンドレスモード<br>現在のスコア：${corrects}`);
     $('#modeWinStreakArea').html(`ハイスコア：${getLocalStorage(keyEndlessHighScore) || 0}`)
-}
-
-function setModeInfoAreaForSpeedrunInGame(millisecond) {
-    const totalSecond = Math.floor(millisecond / 1000);
-    const formattedTime = `${Math.floor(totalSecond / 60).toString().padStart(2, '0')}:${(totalSecond % 60).toString().padStart(2, '0')}`;
-    $('#modeNameArea').html(`スピードランモード<br>正解数　${corrects} ／ ${speedrunMaxStreak}<br>経過時間　${formattedTime}`);
-}
-
-function setWinStreakAreaForSpeedrun() {
-    const highScore = getLocalStorage(keySpeedrunHighScore + currentRegulation.key);
-    $('#modeWinStreakArea').html(`ハイスコア（${currentRegulation.label}）：${highScore ? millisecondToEncodedStr(highScore) : '記録なし'}`);
 }
 
 // 解答を設定する
@@ -264,41 +472,18 @@ function setTarget(seed, studentsList = allQuizData) {
     target = studentsList[mt.nextInt(0, studentsList.length)];
 }
 
-// モードの切り替え
-function switchMode(targetMode) {
-    if (currentMode == targetMode) {
-        // 既に変更対象のモードなら何もしない
-        return;
-    }
-
-    // スピードランモードのモード部分書き換えの解除
-    if (intervalId !== void 0) {
-        clearInterval(intervalId);
-        intervalId = void 0;
-    }
-
-    currentMode = targetMode;
-    setup();
-}
-
 // 解答ボタンを押した時の処理
 function answerProcess(guessedName, loadFlg = false) {
     // ボタンを無効化
     $("#buttonGuess").attr('disabled', '');
 
     // 引数として渡された名前から解答として選ばれた生徒のオブジェクトを取得
-    const guessed = implementedStudents.find(s => s.studentName === guessedName);
+    const guessed = allQuizData.find(s => s.charaName === guessedName);
 
     // 生徒がリストから見つからなかったか既に解答に使った生徒なら何もしないで戻す
     if (guessed == null || (!loadFlg && guesses.includes(guessedName))) {
         $("#buttonGuess").removeAttr('disabled');
         return;
-    }
-
-    // スピードランモードのモード部分書き換えの解除
-    if (intervalId !== void 0) {
-        clearInterval(intervalId);
-        intervalId = void 0;
     }
 
     // 結果判定
@@ -314,14 +499,7 @@ function answerProcess(guessedName, loadFlg = false) {
     // セーブデータのロード中でない場合、答えた生徒をセーブ
     if (!loadFlg) {
         guesses.push(guessedName);
-        switch (currentMode) {
-            case modes.daily:
-                setLocalStorage(keyDailyGuesses, guesses);
-                break;
-            case modes.endless:
-                setLocalStorage(keyEndlessGuesses, guesses);
-                break;
-        }
+        setLocalStorage(keyEndlessGuesses, guesses);
     }
 
     if (judgeObj.isHit === same || tries === maxTries) {
@@ -331,31 +509,19 @@ function answerProcess(guessedName, loadFlg = false) {
         // ゲームが途中の場合解答回数表示の更新とボタンの再有効化
         setTriesAreaInGame();
         $("#buttonGuess").removeAttr('disabled');
-
-        if (currentMode == modes.speedrun) {
-            // スピードランモードの場合、1秒後にモード部分書き換えの再有効化
-            // アニメーションの時間を合計時間から除く
-            setTimeout(function () {
-                intervalId = setInterval(function () {
-                    setModeInfoAreaForSpeedrunInGame((speedrunSum + (Date.now() - speedrunStart - (tries * 1000))))
-                }, 100);
-            }, 1000);
-        }
     }
 }
 
 // 各要素ごとの正誤判定
 function guess(guessed) {
     const judgeSameOrWrong = (a, b) => a === b ? same : wrong;
-    const judgeSameOrWrongBitwise = (a, b) => (a & b) !== 0 ? same : wrong;
-
     return {
-        isHit: judgeSameOrWrong(target.studentName, guessed.studentName),
-        isSameWeapon: judgeSameOrWrong(target.data.weapon, guessed.data.weapon),
-        isSameClass: judgeSameOrWrongBitwise(target.data.class, guessed.data.class),
-        isSameSchool: judgeSameOrWrong(target.data.school, guessed.data.school),
-        isSameAttackType: judgeSameOrWrong(target.data.attackType, guessed.data.attackType),
-        isSameImplDate: guessDate(target.data.implementationDate, guessed.data.implementationDate)
+        isHit: judgeSameOrWrong(target.charaName, guessed.charaName),
+        isSameElement: judgeSameOrWrong(target.data.element, guessed.data.element),
+        isSameType: judgeSameOrWrong(target.data.type, guessed.data.type),
+        isSameRace: judgeSameOrWrong(target.data.race, guessed.data.race),
+        isSameFirstWeapon: judgeSameOrWrong(target.data.weapon1, guessed.data.weapon1),
+        isSameSecondWeapon: judgeSameOrWrong(target.data.weapon2, guessed.data.weapon2)
     };
 }
 
@@ -370,30 +536,16 @@ function prependTableRow(guessed, judgeObj) {
         return cell;
     }
 
-    // クラスを表すビットからクラスの文字列を生成するヘルパー関数
-    function getClassStr(classBit) {
-        let classStrings = [];
-        for (let key in classes) {
-            if ((key & classBit) !== 0) {
-                classStrings.push(classes[key]);
-            }
-        }
-
-        return classStrings.join('<br>');
-    }
-
     // 追加する行のHTMLの組み立て
     const $newRow = $('<div>').addClass('row');
 
-    $newRow.append(createCell(guessed.studentName, judgeObj.isHit, ['studentNameCol']));
-    $newRow.append(createCell(weapons[guessed.data.weapon], judgeObj.isSameWeapon, ['weaponTypeCol']));
-    $newRow.append(createCell(getClassStr(guessed.data.class), judgeObj.isSameClass, ['classCol']));
-    $newRow.append(createCell(schools[guessed.data.school], judgeObj.isSameSchool, ['schoolCol']));
-    $newRow.append(createCell(attackTypes[guessed.data.attackType], judgeObj.isSameAttackType, ['attackTypeCol']));
-    const implDateContent = guessed.data.implementationDate +
-        (judgeObj.isSameImplDate === same ? '' : '<br>' + judgeObj.isSameImplDate);
-    $newRow.append(createCell(implDateContent, judgeObj.isSameImplDate === same ? same : wrong, ['implDateCol']));
-
+    $newRow.append(createCell(guessed.charaName, judgeObj.isHit, ['charaNameCol']));
+    $newRow.append(createCell(guessed.data.element, judgeObj.isSameElement, ['elementCol']));
+    $newRow.append(createCell(guessed.data.type, judgeObj.isSameType, ['typeCol']));
+    $newRow.append(createCell(guessed.data.race, judgeObj.isSameRace, ['raceCol']));
+    $newRow.append(createCell(guessed.data.weapon1, judgeObj.isSameFirstWeapon, ['firstWeaponCol']));
+    $newRow.append(createCell(guessed.data.weapon2, judgeObj.isSameSecondWeapon, ['secondWeaponCol']));
+    
     // グリッドの一番上の行に追加
     $('#checkGridBody').prepend($newRow);
 
@@ -401,43 +553,35 @@ function prependTableRow(guessed, judgeObj) {
     $.each($($newRow).children(), function (i, val) {
         setTimeout(function () {
             $(val).children().toggleClass('flipped');
-        }, currentMode == modes.daily ? 10 + 350 * i : 10);
+        }, 10);
     });
 }
 
+
+
+
 // ゲーム終了時の処理
 function endGame(isHit, loadFlg = false) {
-    const result = `${isHit === same ? '正解！' : '不正解…。'}答えは「${target.studentName}」でした。`;
+    const result = `${isHit === same ? '正解！' : '不正解…。'}答えは「${target.charaName}」でした。`;
 
     $('#guessArea').addClass('fold');
     $('#infoArea').addClass(isHit);
     $('#infoArea').append($('<div>').attr('id', 'infoButtonArea'));
     $('#triesArea').html($('<div>').html(result));
 
-    if (currentMode == modes.daily || (currentMode == modes.endless && isHit === wrong)) {
+    if (isHit === wrong) {
         // デイリーモードでゲーム終了した時とエンドレスモードで正解できなかった時の処理
         const shareStr = currentMode == modes.endless ? createShareStrForEndless() : createShareStrForDaily(isHit);
         insertShareButton(shareStr);
 
-        if (currentMode == modes.endless) {
-            insertRetryButton();
+        insertRetryButton();
 
-            // セーブデータ削除
-            corrects = 0;
-            removeLocalStorage(keyEndlessTarget);
-            removeLocalStorage(keyEndlessCorrects);
-            removeLocalStorage(keyEndlessGuesses);
-        } else if (!loadFlg) {
-            // デイリーモードかつセーブデータのロード時以外は連続正解日数の設定
-            let winStreak = getLocalStorage(keyDailyWinStreak);
-            if (isHit === same) {
-                setLocalStorage(keyDailyWinStreak, winStreak == null ? 1 : winStreak + 1);
-            } else {
-                setLocalStorage(keyDailyWinStreak, 0);
-            }
-            setModeInfoAreaForDaily();
-        }
-    } else if (currentMode == modes.endless) {
+        // セーブデータ削除
+        corrects = 0;
+        removeLocalStorage(keyEndlessTarget);
+        removeLocalStorage(keyEndlessCorrects);
+        removeLocalStorage(keyEndlessGuesses);
+    } else {
         // エンドレスモードで正解した時の処理
         if (!loadFlg) {
             setLocalStorage(keyEndlessCorrects, ++corrects);
@@ -447,10 +591,6 @@ function endGame(isHit, loadFlg = false) {
             setModeInfoAreaForEndless();
         }
         insertSingleButton('nextButton', '次の問題へ', function () { setup(true) })
-    } else if (currentMode == modes.speedrun) {
-        
-    } else {
-        // それ以外
     }
 }
 
@@ -476,11 +616,6 @@ function createShareStrForDaily(isHit) {
 // SNSでシェアする時の文章を作る（エンドレスモード用）
 function createShareStrForEndless() {
     return `#Kivodle のエンドレスモードで${corrects}問連続で正解しました！\n`;
-}
-
-// SNSでシェアする時の文章を作る（スピードランモード用）
-function createShareStrForSpeedrun(record) {
-    return `#Kivodle のスピードランモード（${currentRegulation.label}）で${speedrunMaxStreak}問正解するのにかかった時間は ${record} でした！\n`;
 }
 
 // シェアボタンをDOMに挿入する
@@ -606,16 +741,6 @@ function convertToHiragana(src) {
     }
 
     return ret;
-}
-
-// 今日の日付を取得する
-// ただしUTCで午後19時以降（日本時間午前4時～午前9時までの間）の場合日付を1日進める
-function getToday() {
-    const today = new Date();
-    if (today.getUTCHours() >= 19) {
-        today.setUTCDate(today.getUTCDate() + 1);
-    }
-    return today;
 }
 
 function getLocalStorage(key) {

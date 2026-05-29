@@ -43,7 +43,6 @@
                 <div class="header-title">
                     <h1 id="title">GBF-Wordle</h1>
                     <div id="header-link-list">
-                        
                         <div class="rule-btn">ルール <i class="fa-solid fa-angle-down"></i></div>
                     </div>
                 </div>
@@ -93,10 +92,8 @@
     </div>
     
     <div id="dummy-header"></div>
-
     <div id="app">
         <div id="playArea">
-
             <div id="infoArea">
                 <div id="modeInfoArea">
                     <div id="modeNameArea"></div>
@@ -104,25 +101,23 @@
                 </div>
                 <div id="triesArea"></div>
             </div>
-
             <div id="guessArea">
                 <select id="selectGuess">
                 </select>
-                <button id="buttonGuess" class="btn btnYellow" onclick="answerProcess($('#selectGuess').val())">
+                <button id="buttonGuess" class="btn" onclick="answerProcess($('#selectGuess').val())">
                     <div class="btnText">解答</div>
                 </button>
             </div>
-
             <div id="checkArea">
                 <div id="checkGrid">
                     <div id="checkGridHeader">
                         <div class="row">
-                            <div class="header studentNameCol">キャラ名</div>
-                            <div class="header weaponTypeCol">属性</div>
-                            <div class="header classCol">戦術タイプ</div>
-                            <div class="header schoolCol">種族</div>
-                            <div class="header attackTypeCol">性別</div>
-                            <div class="header implDateCol">得意武器</div>
+                            <div class="header charaNameCol">キャラ名</div>
+                            <div class="header elementCol">属性</div>
+                            <div class="header typeCol">戦術タイプ</div>
+                            <div class="header raceCol">種族</div>
+                            <div class="header firstWeaponCol">得意武器１</div>
+                            <div class="header secondWeaponCol">得意武器２</div>
                         </div>
                     </div>
                     <div id="checkGridBody">
@@ -131,6 +126,8 @@
             </div>
         </div>
     </div>
+
+
 
     <script src="js/wordle.js"></script>
     <script src="js/slide.js"></script>
