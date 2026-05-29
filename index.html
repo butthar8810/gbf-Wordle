@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO対策 -->
+    <meta name="description" content="グランブルーファンタジーの生徒を当てるWordle風ゲーム">
+    <meta name="keywords" content="グランブルーファンタジー, GRANBLUE FANTASY, Wordle">
+    <meta name="author" content="Butthar8810">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="GBF-Wordle">
+    <meta property="og:description" content="ブルーアーカイブの生徒を当てるWordle風ゲーム">
+    <meta property="og:image" content="https://github.com/butthar8810/gbf-profile-quiz/blob/main/images/ip-granblue.png">
+    <meta property="og:url" content="">
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Butthar_8810">
+    <meta name="twitter:title" content="GBF-Wordle">
+    <meta name="twitter:description" content="ブルーアーカイブの生徒を当てるWordle風ゲーム">
+    <meta name="twitter:image" content="https://github.com/butthar8810/gbf-profile-quiz/blob/main/images/ip-granblue.png">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/js/tom-select.complete.min.js" defer></script>
+    <script src="https://magicant.github.io/sjavascript/mt.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
+
+    <title>GBF-Wordle</title>
+</head>
+
+<body onload="gameStart()">
+    <header>
+        <div id="main-header">
+            <div class="main-inner">
+                <div id="header-logo">
+                    <a href="/"><img src="images/ip-granblue.png" alt=""></a>
+                </div>
+                <div class="header-title">
+                    <h1 id="title">GBF-Wordle</h1>
+                    <div id="header-link-list">
+                        
+                        <div class="rule-btn">ルール <i class="fa-solid fa-angle-down"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="rule-slide-menu">
+        <div class="rule-text">
+            <div>
+                <h2>GBF-Wordleって何？</h2>
+                <p>
+                    ゲーム「<a href="https://granbluefantasy.com/ja/">グランブルーファンタジー</a>」に登場するキャラクターから１人が正解として選ばれるので、その生徒の特徴から推理しようというゲームです。
+                </p>
+            </div>
+            <div>
+                <h2>遊び方</h2>
+                <ol>
+                    <li>プルダウンリストからキャラクターを１人選んで「解答」ボタンを押す。</li>
+                    <li>
+                        選んだ生徒と正解のキャラクターとの間で「キャラの属性」「戦術タイプ」「種族」「性別」「得意武器」の比較を行う。<br>
+                        一致している場合は<span class="same">緑背景</span>、そうでない場合は<span class="wrong">赤背景</span>になる。<br>
+                        さらに、実装日は正解の生徒の実装日が選んだ生徒の実装日より前か後かも表示される。<br>
+                    </li>
+                    <li>
+                        2.の内容をもとに推理して1.を行い、５回以内に正解の生徒を当てられればクリア。<br>
+                        そうでない場合はゲームオーバー。
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <h2>お借りしたものなど</h2>
+                <ul>
+                    <li><a href="https://gbf-wiki.com/index.php">グランブルーファンタジー(グラブル)攻略wiki</a>：キャラデータを参照させていただきました。</li>
+                    <li><a href="https://jquery.com/">jQuery</a></li>
+                    <li><a href="https://magicant.github.io/sjavascript/mt.html">Mersenne Twister in JavaScript</a></li>
+                    <li><a href="https://tom-select.js.org/">Tom Select</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>その他</h2>
+                <p>
+                    GBF-Wordleは非公式であり、株式会社Cygamesとは一切関係ありません。<br>
+                    当サイトで使用されている情報の所有権および著作権はそれぞれの権利者に帰属します。<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="dummy-header"></div>
+
+    <div id="app">
+        <div id="playArea">
+
+            <div id="infoArea">
+                <div id="modeInfoArea">
+                    <div id="modeNameArea"></div>
+                    <div id="modeWinStreakArea"></div>
+                </div>
+                <div id="triesArea"></div>
+            </div>
+
+            <div id="guessArea">
+                <select id="selectGuess">
+                </select>
+                <button id="buttonGuess" class="btn btnYellow" onclick="answerProcess($('#selectGuess').val())">
+                    <div class="btnText">解答</div>
+                </button>
+            </div>
+
+            <div id="checkArea">
+                <div id="checkGrid">
+                    <div id="checkGridHeader">
+                        <div class="row">
+                            <div class="header studentNameCol">キャラ名</div>
+                            <div class="header weaponTypeCol">属性</div>
+                            <div class="header classCol">戦術タイプ</div>
+                            <div class="header schoolCol">種族</div>
+                            <div class="header attackTypeCol">性別</div>
+                            <div class="header implDateCol">得意武器</div>
+                        </div>
+                    </div>
+                    <div id="checkGridBody">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/wordle.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>
