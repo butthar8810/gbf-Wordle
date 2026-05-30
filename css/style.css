@@ -253,7 +253,7 @@ header{
     padding: 0 !important;
 }
 .ts-dropdown-content {
-    max-height: 80vh; /* お好みの縦幅に変更してください */
+    max-height: 600px !important; /* お好みの縦幅に変更してください */
 }
 
 .ts-dropdown-content > .option {

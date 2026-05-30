@@ -544,10 +544,10 @@ function answerProcess(guessedName, loadFlg = false) {
     // ボタンを無効化
     $("#buttonGuess").attr('disabled', '');
 
-    // 引数として渡された名前から解答として選ばれた生徒のオブジェクトを取得
+    // 引数として渡された名前から解答として選ばれたキャラクターのオブジェクトを取得
     const guessed = allQuizData.find(s => s.charaName === guessedName);
 
-    // 生徒がリストから見つからなかったか既に解答に使った生徒なら何もしないで戻す
+    // キャラクターがリストから見つからなかったか既に解答に使ったキャラクターなら何もしないで戻す
     if (guessed == null || (!loadFlg && guesses.includes(guessedName))) {
         $("#buttonGuess").removeAttr('disabled');
         return;
@@ -563,7 +563,7 @@ function answerProcess(guessedName, loadFlg = false) {
     // 挑戦回数のインクリメント
     tries++;
 
-    // セーブデータのロード中でない場合、答えた生徒をセーブ
+    // セーブデータのロード中でない場合、答えたキャラクターをセーブ
     if (!loadFlg) {
         guesses.push(guessedName);
         switch (currentMode) {
