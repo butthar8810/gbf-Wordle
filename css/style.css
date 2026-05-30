@@ -41,6 +41,12 @@ header{
     height: 100%;
     margin-left: 10px;
 }
+
+@media screen and (max-width: 520px) {
+    #header-logo{
+        display: none;
+    }
+}
 #header-logo a{
     width: 100%;
     height: 100%;
@@ -84,7 +90,7 @@ header{
 /*************************************************************/
 .rule-btn{
     color: #1a1311;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     white-space: nowrap;
     position: relative;
@@ -143,10 +149,10 @@ header{
 /* デイリー・エンドレスモードボタン
 /*************************************************************/
 .mode-btn{
-    font-size: 16px;
+    font-size: clamp(10px, 1.5vw, 16px);
     color: #1a1311;
     text-decoration: none;
-    padding: 3px 36px;
+    padding: 3px 1vw;
     border-radius: 8px;
     font-weight: 600;
     background-image: linear-gradient(#d8cebd, #e8e0d2 20% 100%);
@@ -326,7 +332,7 @@ header{
 
 #checkGrid {
     display: grid;
-    grid-template-columns: 5fr 2fr 4fr 4fr 3fr 3fr 4fr;
+    grid-template-columns: 5fr 2fr 4fr 4fr 2fr 3fr 3fr 4fr;
     gap: 3px;
 }
 .row,
@@ -391,14 +397,17 @@ header{
 .raceCol {
     grid-column: 4;
 }
-.firstWeaponCol {
+.genderCol{
     grid-column: 5;
 }
-.secondWeaponCol {
+.firstWeaponCol {
     grid-column: 6;
 }
-.impCol {
+.secondWeaponCol {
     grid-column: 7;
+}
+.implCol {
+    grid-column: 8;
 }
 
 .same {
