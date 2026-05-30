@@ -4,19 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO対策 -->
-    <meta name="description" content="グランブルーファンタジーの生徒を当てるWordle風ゲーム">
+    <meta name="description" content="グランブルーファンタジーのキャラクターを当てるゲーム">
     <meta name="keywords" content="グランブルーファンタジー, GRANBLUE FANTASY, Wordle">
     <meta name="author" content="Butthar8810">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="GBF-Wordle">
-    <meta property="og:description" content="ブルーアーカイブの生徒を当てるWordle風ゲーム">
+    <meta property="og:description" content="グランブルーファンタジーのキャラクターを当てるゲーム">
     <meta property="og:image" content="https://github.com/butthar8810/gbf-profile-quiz/blob/main/images/ip-granblue.png">
     <meta property="og:url" content="">
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Butthar_8810">
     <meta name="twitter:title" content="GBF-Wordle">
-    <meta name="twitter:description" content="ブルーアーカイブの生徒を当てるWordle風ゲーム">
+    <meta name="twitter:description" content="グランブルーファンタジーのキャラクターを当てるゲーム">
     <meta name="twitter:image" content="https://github.com/butthar8810/gbf-profile-quiz/blob/main/images/ip-granblue.png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -44,6 +44,8 @@
                     <h1 id="title">GBF-Wordle</h1>
                     <div id="header-link-list">
                         <div class="rule-btn">ルール <i class="fa-solid fa-angle-down"></i></div>
+                        <a class="mode-btn dayly-btn" href="" onclick="switchMode(modes.daily); return false;">デイリー</a>
+                        <a class="mode-btn endless-btn" href="" onclick="switchMode(modes.endless); return false;">エンドレス</a>
                     </div>
                 </div>
             </div>
@@ -62,12 +64,11 @@
                 <ol>
                     <li>プルダウンリストからキャラクターを１人選んで「解答」ボタンを押す。</li>
                     <li>
-                        選んだ生徒と正解のキャラクターとの間で「キャラの属性」「戦術タイプ」「種族」「性別」「得意武器」の比較を行う。<br>
-                        一致している場合は<span class="same">緑背景</span>、そうでない場合は<span class="wrong">赤背景</span>になる。<br>
-                        さらに、実装日は正解の生徒の実装日が選んだ生徒の実装日より前か後かも表示される。<br>
+                        選んだキャラクターと正解のキャラクターとの間で「キャラの属性」「戦術タイプ」「種族」「性別」「得意武器」の比較を行う。<br>
+                        一致している場合は<span class="same">緑背景</span>、そうでない場合は<span class="wrong">赤背景</span>になる。
                     </li>
                     <li>
-                        2.の内容をもとに推理して1.を行い、５回以内に正解の生徒を当てられればクリア。<br>
+                        2.の内容をもとに推理して1.を行い、５回以内に正解のキャラクターを当てられればクリア。<br>
                         そうでない場合はゲームオーバー。
                     </li>
                 </ol>
@@ -118,6 +119,7 @@
                             <div class="header raceCol">種族</div>
                             <div class="header firstWeaponCol">得意武器１</div>
                             <div class="header secondWeaponCol">得意武器２</div>
+                            <div class="header impCol">実装日</div>
                         </div>
                     </div>
                     <div id="checkGridBody">
