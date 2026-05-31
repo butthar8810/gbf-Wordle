@@ -690,7 +690,7 @@ function endGame(isHit, loadFlg = false) {
 
 // SNSでシェアする時の文章を作る（デイリーモード用）
 function createShareStrForDaily(isHit) {
-    let shareStr = '今日の #GBF-Wordle は' + String(judges.length) + '回解答して';
+    let shareStr = '今日の #GBFWordle は' + String(judges.length) + '回解答して';
     shareStr += (isHit === same ? '正解しました！' : '不正解でした……。') + '\n\n';
 
     let i;
@@ -753,7 +753,6 @@ function insertRetryButton() {
 }
 
 function insertSingleButton(id, text, triggered) {
-    console.log(text);
     $('#infoButtonArea').append($('<div>').attr('id', 'singleButtonArea'));
     $('#singleButtonArea').append(createButton(id, 'btnYellow', text));
     $(`#${id}`).on('click', function () { triggered() });
