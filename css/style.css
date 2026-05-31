@@ -337,7 +337,7 @@ header{
 
 #checkGrid {
     display: grid;
-    grid-template-columns: 5fr 2fr 4fr 4fr 2fr 3fr 3fr 4fr;
+    grid-template-columns: 5fr 2fr 4fr 4fr 2fr 5fr 4fr;
     gap: 3px;
 }
 .row,
@@ -396,29 +396,40 @@ header{
 .elementCol {
     grid-column: 2;
 }
+.elementCol img{
+    width: 100%;
+    max-width: 62px;
+}
 .typeCol {
     grid-column: 3;
 }
 .raceCol {
     grid-column: 4;
 }
+.raceCol img{
+    width: 100%;
+    max-width: 114px;
+}
 .genderCol{
     grid-column: 5;
 }
-.firstWeaponCol {
+.WeaponCol {
     grid-column: 6;
 }
-.secondWeaponCol {
-    grid-column: 7;
+.WeaponCol img{
+    width: 50%;
+    max-width: 75px;
 }
 .implCol {
-    grid-column: 8;
+    grid-column: 7;
 }
 
 .same {
     background-color: #aaffaa;
 }
-
+.match {
+    background-color: #fdff85;
+}
 .wrong {
     background-color: #ffaaaa;
 }
