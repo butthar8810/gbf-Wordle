@@ -45,7 +45,7 @@ header{
     margin-left: 10px;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 420px) {
     #header-logo{
         display: none;
     }
@@ -94,24 +94,35 @@ header{
 /*************************************************************/
 .rule-btn{
     color: #1a1311;
-    font-size: clamp(10px, 1.8vw, 16px);
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 900;
     white-space: nowrap;
-    position: relative;
     cursor : pointer;
     margin-right: 20px;
+    padding: 3px 1px;
+    padding-right: 10px;
+
+    border: 1px solid #1a1311;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+
 
     transition: all .3s ease;
 }
-
+.rule-btn i{
+    font-size: 24px;
+}
 .rule-btn:hover{
-    border-bottom: 2px solid #1a1311;
+    
+    color: white;
+    background-color: #1a1311;
 }
 
 .rule-slide-menu{
     position: absolute;
     width: 100vw;
-    height: 400px;
+    height: 600px;
     top: -1000px;
     left: 0;
     background-color: #c4c4c4;
@@ -127,11 +138,11 @@ header{
 }
 
 .rule-text{
-    width: clac(100% - 160px);
+    width: clac(100% - 20vw);
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 20px 80px;
+    margin: 20px 10vw;
 }
 .rule-text h1{
     font-size: 28px;
