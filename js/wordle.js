@@ -505,12 +505,12 @@ function answerForLoad() {
 }
 
 function setModeInfoAreaForDaily() {
-    $('#modeNameArea').html('デイリーモード');
+    $('#modeNameArea').html('');
     $('#modeWinStreakArea').html(`連続正解日数：${getLocalStorage(keyDailyWinStreak) || 0}`)
 }
 
 function setModeInfoAreaForEndless() {
-    $('#modeNameArea').html(`エンドレスモード<br>現在のスコア：${corrects}`);
+    $('#modeNameArea').html(`現在のスコア：${corrects}`);
     $('#modeWinStreakArea').html(`ハイスコア：${getLocalStorage(keyEndlessHighScore) || 0}`)
 }
 
@@ -643,11 +643,13 @@ function prependTableRow(guessed, judgeObj) {
 // ゲーム終了時の処理
 function endGame(isHit, loadFlg = false) {
     const result = `${isHit === same ? '正解！' : '不正解…。'}答えは「${target.charaName}」でした。`;
+    const src = target.icon;
 
     $('#guessArea').addClass('fold');
     $('#infoArea').addClass(isHit);
     $('#infoArea').append($('<div>').attr('id', 'infoButtonArea'));
     $('#triesArea').html($('<div>').html(result));
+    $('#triesArea').append($('<img>').attr("src",src));
 
 
     if (currentMode == modes.daily || (currentMode == modes.endless && isHit === wrong)) {
@@ -697,6 +699,7 @@ function createShareStrForDaily(isHit) {
         shareStr += judges[i].isSameElement === same ? '🟩' : '🟥';
         shareStr += judges[i].isSameType === same ? '🟩' : '🟥';
         shareStr += judges[i].isSameRace === same ? '🟩' : '🟥';
+        shareStr += judges[i].isSameGender === same ? '🟩' : '🟥';
         shareStr += judges[i].isSameFirstWeapon === same ? '🟩' : '🟥';
         shareStr += judges[i].isSameSecondWeapon === same ? '🟩' : '🟥';
         shareStr += judges[i].isSameImpl === same ? '🟩' : '🟥';
