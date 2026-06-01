@@ -3690,6 +3690,21 @@
 		,"icon":"images/icon/ミカエル.jpg"
 	}
 	,{
+		 "charaName":"ミカボシ"
+		,"data":{
+			 "element":"火"
+			,"type":"攻撃タイプ"
+			,"race":"その他"
+			,"gender":"女"
+			,"weapon":{
+				 "first":"格闘"
+				,"second":"-"
+			}
+			,"implementation":"2026/05/31"
+		}
+		,"icon":"images/icon/ミカボシ.jpg"
+	}
+	,{
 		 "charaName":"ミニゴブ"
 		,"data":{
 			 "element":"光"

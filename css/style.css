@@ -1,200 +1,200 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
 }
 
 #dummy-header{
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 20px;
 }
 body{
-    background-image: linear-gradient(90deg, #94b7be, #cfe7ea 10%, #d1dad7 85%, #b2c3c3);
+	background-image: linear-gradient(90deg, #94b7be, #cfe7ea 10%, #d1dad7 85%, #b2c3c3);
 }
 /**********************************************************************/
 /* header form
 /**********************************************************************/
 header{
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
 }
 #main-header{
-    width: 100%;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 100%;
+	background-color: white;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .main-inner{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 
 }
 #header-logo{
-    height: 100%;
-    margin-left: 10px;
+	height: 100%;
+	margin-left: 10px;
 }
 
 @media screen and (max-width: 420px) {
-    #header-logo{
-        display: none;
-    }
+	#header-logo{
+		display: none;
+	}
 }
 #header-logo a{
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 #header-logo a img{
-    height: 100%;
+	height: 100%;
 }
 .header-main{
-    width: 100%;
-    height: 100%;
-    margin-left: 30px;
+	width: 100%;
+	height: 100%;
+	margin-left: 30px;
 }
 
 @media screen and (max-width: 1199px) {
-    #title{
-        font-size: 24px;
-    }
+	#title{
+		font-size: 24px;
+	}
 }
 @media screen and (max-width: 787px) {
-    #title{
-        font-size: 18px;
-    }
+	#title{
+		font-size: 18px;
+	}
 }
 #header-link-list{
-    width: 100%;
-    height: 60%;
-    font-size: 30px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
+	width: 100%;
+	height: 60%;
+	font-size: 30px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
 }
 #header-link-tab{
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
 }
 
 /*************************************************************/
 /* rule-btn：ルールボタン
 /*************************************************************/
 .rule-btn{
-    color: #1a1311;
-    font-size: 16px;
-    font-weight: 900;
-    white-space: nowrap;
-    cursor : pointer;
-    margin-right: 20px;
-    padding: 3px 1px;
-    padding-right: 10px;
+	color: #1a1311;
+	font-size: 16px;
+	font-weight: 900;
+	white-space: nowrap;
+	cursor : pointer;
+	margin-right: 20px;
+	padding: 3px 1px;
+	padding-right: 10px;
 
-    border: 1px solid #1a1311;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
+	border: 1px solid #1a1311;
+	border-radius: 18px;
+	display: flex;
+	justify-content: center;
 
 
-    transition: all .3s ease;
+	transition: all .3s ease;
 }
 .rule-btn i{
-    font-size: 24px;
+	font-size: 24px;
 }
 .rule-btn:hover{
-    
-    color: white;
-    background-color: #1a1311;
+	
+	color: white;
+	background-color: #1a1311;
 }
 
 .rule-slide-menu{
-    position: absolute;
-    width: 100vw;
-    height: 600px;
-    top: -1000px;
-    left: 0;
-    background-color: #c4c4c4;
-    z-index: 1000;
-    overflow-y: scroll;
+	position: absolute;
+	width: 100vw;
+	height: 600px;
+	top: -1000px;
+	left: 0;
+	background-color: #c4c4c4;
+	z-index: 1000;
+	overflow-y: scroll;
 
-    display: flex;
-    transition: top 0.3s ease-in-out;
+	display: flex;
+	transition: top 0.3s ease-in-out;
 }
 
 .rule-slide-menu.active{
-    top: 100px;
+	top: 100px;
 }
 
 .rule-text{
-    width: clac(100% - 20vw);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 20px 10vw;
+	width: clac(100% - 20vw);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 20px 10vw;
 }
 .rule-text h1{
-    font-size: 28px;
+	font-size: 28px;
 }
 .rule-text p{
-    font-size: 16px;
-    margin: 10px 0;
+	font-size: 16px;
+	margin: 10px 0;
 }
 .rule-text ol{
-    padding: 0px 25px;
+	padding: 0px 25px;
 }
 .rule-text ul{
-    padding: 10px 40px;
+	padding: 10px 40px;
 }
 .rule-text div {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 /*************************************************************/
 /* デイリー・エンドレスモードボタン
 /*************************************************************/
 .mode-tab{
-    height: 100%;
-    font-size: clamp(10px, 1.8vw, 16px);
-    color: #1a1311;
-    text-decoration: none;
-    padding: 3px 1vw;
-    border-radius: 8px 8px 0 0;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+	height: 100%;
+	font-size: clamp(10px, 1.8vw, 16px);
+	color: #1a1311;
+	text-decoration: none;
+	padding: 3px 1vw;
+	border-radius: 8px 8px 0 0;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
 
-    margin: 0 10px;
+	margin: 0 10px;
 }
 .pressed{
-    background-color: #cfe4e7;
+	background-color: #cfe4e7;
 }
 
 /*************************************************************/
 /* app > playArea
 /*************************************************************/
 #app {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 }
 @media screen and (max-width: 960px) {
-    #app {
-        width: 100vw;
-    }
+	#app {
+		width: 100vw;
+	}
 }
 
 
@@ -204,128 +204,128 @@ header{
 /* infoArea：情報エリア
 /*************************************************************/
 #infoArea {
-    text-align: center;
-    border-radius: 3px;
+	text-align: center;
+	border-radius: 3px;
 }
 
 #modeInfoArea {
-    width: 100%;
+	width: 100%;
 }
 
 #modeInfoArea div {
-    font-size: clamp(10px, 1.8vw, 16px);
-    width: 200px;
-    margin-left: 2px;
-    margin-right: 2px;
-    text-align: left;
+	font-size: clamp(10px, 1.8vw, 16px);
+	width: 200px;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align: left;
 }
 
 #infoButtonArea {
-    display: flex;
-    flex-flow: column;
+	display: flex;
+	flex-flow: column;
 }
 
 
 #infoButtonArea .btn {
-    margin: 5px;
-    width: 160px;
-    height: 28px;
+	margin: 5px;
+	width: 160px;
+	height: 28px;
 }
 
 #shareButtonArea {
-    display: grid;
-    grid-template-columns: repeat(3, 160px);
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+	display: grid;
+	grid-template-columns: repeat(3, 160px);
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 }
 @media screen and (max-width: 720px) {
-    #shareButtonArea {
-        grid-template-columns: repeat(2, 160px);
-    }
+	#shareButtonArea {
+		grid-template-columns: repeat(2, 160px);
+	}
 }
 #shareButtonArea .btn {
-    margin: 0;
+	margin: 0;
 }
 
 #singleButtonArea {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 /*************************************************************/
 /* guessArea：推測エリア
 /*************************************************************/
 #guessArea {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5px 0;
-    text-align: center;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	margin: 0 auto;
+	padding: 5px 0;
+	text-align: center;
 }
 
 .ts-wrapper {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 .ts-control {
-    height: 80px;
-    height: 52px; /* 入力エリアの縦幅を固定または変更 */
-    padding: 0 !important;
+	height: 80px;
+	height: 52px; /* 入力エリアの縦幅を固定または変更 */
+	padding: 0 !important;
 }
 .ts-dropdown-content {
-    max-height: 600px !important; /* お好みの縦幅に変更してください */
+	max-height: 600px !important; /* お好みの縦幅に変更してください */
 }
 
 .ts-dropdown-content > .option {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 #selectRegulation {
-    display: inline-block;
-    border-radius: 5px;
-    margin-left: auto;
+	display: inline-block;
+	border-radius: 5px;
+	margin-left: auto;
 }
 
 .choices{
-    width: 100%;
-    height: 100%;
-    display: flex !important;
-    align-items: center;
-    font-size: 16px;
+	width: 100%;
+	height: 100%;
+	display: flex !important;
+	align-items: center;
+	font-size: 16px;
 }
 .choices img{
-    width: 50px;
-    margin-right: 5px;
+	width: 50px;
+	margin-right: 5px;
 }
 #selectGuess{
 
 }
 #buttonGuess {
-    margin: 0 4.825px;
-    width: 19%;
-    min-width: 48px;
+	margin: 0 4.825px;
+	width: 19%;
+	min-width: 48px;
 }
 .btn {
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 1s ease-in-out;
+	border: none;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	transition: transform 1s ease-in-out;
 }
 
 .btn:active {
-    scale: 0.98;
+	scale: 0.98;
 }
 .btnText {
 
-    font-size: 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    height: 100%;
+	font-size: 1rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	height: 100%;
 }
 
 
@@ -333,119 +333,119 @@ header{
 /* checkArea：推測結果エリア
 /*************************************************************/
 #checkArea {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 @media screen and (max-width: 720px) {
-    #checkArea {
-        font-size: calc(100vw / 45);
-    }
+	#checkArea {
+		font-size: calc(100vw / 45);
+	}
 }
 
 .flipped {
-    transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
 }
 
 #checkGrid {
-    display: grid;
-    grid-template-columns: 5fr 2fr 4fr 4fr 2fr 5fr 4fr;
-    gap: 3px;
+	display: grid;
+	grid-template-columns: 5fr 2fr 4fr 4fr 2fr 5fr 4fr;
+	gap: 3px;
 }
 .row,
 #checkGridHeader,
 #checkGridBody {
-    display: contents;
+	display: contents;
 }
 
 .header,
 .cell {
-    border-radius: 3px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+	border-radius: 3px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
 }
 
 .header {
-    background-color: #c6b991;
-    grid-row: 1;
-    font-weight: bold;
+	background-color: #c6b991;
+	grid-row: 1;
+	font-weight: bold;
 }
 
 .cell {
-    min-height: 60px;
-    position: relative;
-    width: 100%;
-    height: 100%;
+	min-height: 60px;
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 @media screen and (max-width: 720px) {
-    .cell {
-        min-height: calc(100vw / 12);
-    }
+	.cell {
+		min-height: calc(100vw / 12);
+	}
 }
 .front,
 .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1s;
-    border-radius: 3px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 1s;
+	border-radius: 3px;
 }
 
 .front {
-    background-color: #c6b991;
+	background-color: #c6b991;
 }
 
 .charaNameCol {
-    grid-column: 1;
+	grid-column: 1;
 }
 .elementCol {
-    grid-column: 2;
+	grid-column: 2;
 }
 .elementCol img{
-    width: 100%;
-    max-width: 62px;
+	width: 100%;
+	max-width: 62px;
 }
 .typeCol {
-    grid-column: 3;
+	grid-column: 3;
 }
 .raceCol {
-    grid-column: 4;
+	grid-column: 4;
 }
 .raceCol img{
-    width: 100%;
-    max-width: 114px;
+	width: 100%;
+	max-width: 114px;
 }
 .genderCol{
-    grid-column: 5;
+	grid-column: 5;
 }
 .WeaponCol {
-    grid-column: 6;
+	grid-column: 6;
 }
 .WeaponCol img{
-    width: 50%;
-    max-width: 75px;
+	width: 50%;
+	max-width: 75px;
 }
 .implCol {
-    grid-column: 7;
+	grid-column: 7;
 }
 
 .same {
-    background-color: #aaffaa;
+	background-color: #aaffaa;
 }
 .match {
-    background-color: #fdff85;
+	background-color: #fdff85;
 }
 .wrong {
-    background-color: #ffaaaa;
+	background-color: #ffaaaa;
 }
 
 .fold {
-    visibility: hidden;
-    height: 0px;
+	visibility: hidden;
+	height: 0px;
 }
